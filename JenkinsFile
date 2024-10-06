@@ -18,7 +18,7 @@ sh "https://github.com/ghadaabassi/PipelineSpringBoot.git"
 
 stage("Generate backend image"){
 steps{
-dir("exp1-spring"){
+dir("PipelineSpringBoot"){
 sh "mvn clean install"
 sh "docker build -t docexp1-spring"
 }
@@ -28,7 +28,7 @@ sh "docker build -t docexp1-spring"
 
 stage("Run docker compose"){
 steps{
-dir("exp1-spring"){
+dir("PipelineSpringBoot"){
 sh "docker compose up -d"
 }
 }
