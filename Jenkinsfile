@@ -11,7 +11,7 @@ pipeline {
         }
         stage("Clone repo") {
             steps {
-                git 'https://github.com/ghadaabassi/PipelineSpringBoot.git'
+                sh 'git clone https://github.com/ghadaabassi/PipelineSpringBoot.git'
             }
         }
         stage("Generate backend image") {
