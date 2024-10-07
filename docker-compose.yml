@@ -1,6 +1,6 @@
 services:
 
   spring-boot-app:
-    images: hello-spring
+    image: hello-spring
     ports:
       - "0.0.0.0:8084:8080"
